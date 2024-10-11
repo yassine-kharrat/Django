@@ -28,6 +28,6 @@ class conference(models.Model):
                 check=models.Q(
                     start_date__gte=timezone.now().date(),
                 ),
-                name="The start date must be >= Today"
+                    name="The start date must be >= Today"
             )
         ]
