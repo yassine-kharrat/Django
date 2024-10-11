@@ -4,7 +4,7 @@ import re
 from django.core.exceptions import ValidationError
 
 def validate_letters_only(value):
-    if not re.match(r'^$[A-Za-z]+',value):
+    if not re.match(r'^[A-Za-z]+$',value):
         raise ValidationError('This field should only contain letters')
 
 class category(models.Model):
@@ -14,3 +14,5 @@ class category(models.Model):
     update_at=models.DateTimeField(auto_now=True)
     class Meta:
         verbose_name_plural="categories"
+
+        
